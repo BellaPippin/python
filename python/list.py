@@ -33,5 +33,5 @@ print (f"You took {total_steps} steps this week.")
 
 # Average Steps.
 print ("\n\n")
-avg_steps = total_steps / 7
-print (f"Your average steps for this week is {avg_steps:.2f}.\n\n")
+average = round(total_steps / len(steps))
+print (f"Your average steps for this week is {average:.2f}.\n\n")
