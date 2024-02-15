@@ -1,7 +1,7 @@
 # This is a program to collect and manage your heart rate.
 print ("\n\n")
 
-# Initialize times list, rates list
+# Initialize times list, rates list, total
 test_times = ["Morning", "Afternoon", "Evening"]
 rates = []
 total = 0
