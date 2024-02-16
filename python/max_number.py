@@ -1,4 +1,4 @@
-# This program finds the largest numbers inside a nested list. (Nested list practice)
+# This program finds the largest number inside nested lists. (Nested list practice)
 print ("\n\n")
 
 # Initialize lists
@@ -11,4 +11,6 @@ for number in numbers:
         max_number = max(number)
         max_numbers.append(max_number)
 
-print (max_numbers)
+max_number = max(max_numbers)
+
+print (max_number)
