@@ -1,18 +1,20 @@
-TAX = .05 # tax is a constant, I capitalize constants
-def main(): #function
-    sales_total = sales() # assigning result of a function to a variable
-    sales_tax(sales_total) # passing a variable to a function 
-    print(f"sales_total: {sales_total}")
+# This program calculates BMI.
+print ("\n\n")
 
-def sales_tax(sales_total): # variable becomes parameter
-    # duck throwing football for passing
-    sales_total = 1000.00
-    tax_amt = sales_total * TAX
-    print(tax_amt)
-
-def sales():
-    my_sales = float(input("What is the price:  "))
-    return my_sales
+# Global variables
 
 
-main()
+def kg_converter():
+    
+
+
+def main ():
+    print ("Hello! This is a BMI calculator.")
+    weight = float(input("Please enter your weight in pounds."))
+    height = float(input("Now please enter your height in feet:  "))
+    
+
+    
+
+
+main ()
