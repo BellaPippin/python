@@ -2,15 +2,15 @@
 print ("\n\n")
 
 # Global variables
-kg_ratio = 0.453592
-mt_ratio = 0.0254
+KG_RATIO = 0.453592
+MT_RATIO = 0.0254
 
 
 def kg_converter(weight):
-    return weight * kg_ratio
+    return weight * KG_RATIO
     
 def mt_converter(height):
-    return height * mt_ratio  
+    return height * MT_RATIO  
 
 def bmi_calc(weight, height):
     return  weight / (height * height)
