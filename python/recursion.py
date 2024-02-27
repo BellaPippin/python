@@ -12,7 +12,7 @@ def factorial(number):
 def main():
     print ("Hello! Let's calculate some factorials!")
     number = int(input("Please enter a non-negative integer:  "))
-    print (f"The factorial of {number} is {factorial(number)}\n\n")
+    print (f"The factorial of {number} is {factorial(number):,.2f}\n\n")
 
 
 
