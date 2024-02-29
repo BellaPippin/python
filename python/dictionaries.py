@@ -34,9 +34,9 @@ nato_dictionary = {
 # This function takes the user input, converts it to uppercase and converts it into the NATO alphabet.
 def spell_word():
     user_word = input("Write a word: ")
-    user_word.upper()
+    upper_word = user_word.upper()
 
-    for letter in user_word:
+    for letter in upper_word:
         if letter in nato_dictionary:
             print(nato_dictionary[letter])
 
