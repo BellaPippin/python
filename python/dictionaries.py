@@ -36,4 +36,13 @@ def spell_word():
     user_word = input("Write a word: ")
     user_word.upper()
 
-    
+    for letter in user_word:
+        if letter in nato_dictionary:
+            print(nato_dictionary[letter])
+
+
+def main():
+    spell_word()
+
+
+main()
