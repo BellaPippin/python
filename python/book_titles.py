@@ -14,7 +14,7 @@ def main():
     
     print ("\nHere are your books in alphabetical order!\n")
     for book in book_list_sorted: 
-        print(book.title()) #Re-capitalzie and prrrrrrint
+        print(book.title()) #Re-capitalize and prrrrrrint
 
 
 
