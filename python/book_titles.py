@@ -4,7 +4,7 @@ print("\n\n")
 def main():
     book_list = []
 
-    for i in range (10):     # Ask for 10 titles, conver to lower case for comparison, append to new list
+    for i in range (10):     # Ask for 10 titles, convert to lower case for comparison, append to list
         book = input("Enter a book title! ")
         book_lower = book.lower()
         book_list.append(book_lower)
