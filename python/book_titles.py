@@ -13,8 +13,8 @@ def main():
     book_list_sorted = sorted(book_list) # Sort list
     
     print ("\nHere are your books in alphabetical order!\n")
-    for book in book_list_sorted: # Re-capitalize each book title
-        print(book.title()) #Prrrrrrint
+    for book in book_list_sorted: 
+        print(book.title()) #Re-capitalzie and prrrrrrint
 
 
 
