@@ -5,7 +5,8 @@ def main():
 
     valid = False
 
-    while valid == False:
+    while not valid:
+            valid = True   # This will be False if any requirements are not met.
             print("""Password Requirements:\n
             Between 8 to 20 characters long.\n
             Contains at least one uppercase letter.\n
@@ -17,15 +18,32 @@ def main():
     
             try:
                 if 7 < len(password) < 21:
-                    continue
+                     continue
                 else:
-                    print("This password is not the right length!")
+                     valid = False
+                     print ("Password is not the right length!")
 
                 for ch in password:
-                    if ch.isupper():
+                     if ch.isupper():
                         continue
-                    else:
-                        print("There has to be an uppercase character!")
+                     else:
+                        valid = False
+                        print ("There has to be an uppercase letter!")
+
+                for ch in password:
+                     if ch.islower():
+                        continue
+                     else:
+                        valid = False
+                        print ("There has to be a lowercase letter!")
+
+                
+                
+                        
+                   
+            
+
+                
                 
             except:
                 print("Whoops, something went totally wrong...")
