@@ -81,20 +81,20 @@ def main():
     print ("ID changed:")
     pet3.display_pet_info()
 
-    # Check Property. (According to ChatGPT, this keeps returning False because the attributes are private.)
+    # Check Property. 
 
     print ("Is there a pet id for Selina Kyle:")
-    print (pet1.check_property("pet_id"))
+    print (pet1.check_property("_Pet__pet_id"))
 
     print ("\n")
 
     print ("Is there an owner last name for Mr Sprinkles:")
-    print (pet3.check_property("owner_last_name"))
+    print (pet3.check_property("_Pet__owner_last_name"))
 
     print ("\n")
 
     print ("Is there a pet name for Juan's cat:")
-    print (pet2.check_property("pet_name"))
+    print (pet2.check_property("_Pet__pet_name"))
 
 
 
