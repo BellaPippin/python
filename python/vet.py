@@ -96,6 +96,11 @@ def main():
     print ("Is there a pet name for Juan's cat:")
     print (pet2.check_property("_Pet__pet_name"))
 
+    print ("\n")
+
+    print ("Is there a breed for Lionel's pet:")
+    print (pet2.check_property("_Pet__breed"))
+
 
 
     
