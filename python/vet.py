@@ -2,6 +2,8 @@
 print ("\n\n")
 
 class Pet:
+    # Class variable
+    vet_name = "Pet Peeve Veterinary Clinic"
 
     def __init__(self, owner_first_name, owner_last_name, pet_id, pet_name, pet_type= "dog"):
         self.__owner_first_name = owner_first_name
@@ -43,14 +45,16 @@ class Pet:
         self.__pet_type = value
 
     # Display Info
-    def print_info(self):
+    def display_pet_info(self):
         print(self.__owner_first_name + " " + self.__owner_last_name)
         print(self.__pet_id)
         print(self.__pet_name)
         print(self.__pet_type)
-        print("\n\n")
-        
-    
+        print("\n")
+
+    # Check property function    
+    def check_property(self, string):
+        return hasattr(self, string)
 
 
 
@@ -66,20 +70,34 @@ def main():
     print ("Loading existing patients details...\n")
 
     # Display patient info
-    pet1.print_info()
-    pet2.print_info()
-    pet3.print_info()
+    pet1.display_pet_info()
+    pet2.display_pet_info()
+    pet3.display_pet_info()
 
     # Use setter methods
     print ("#" * 10)
 
     pet3.set_pet_id ("004567")
     print ("ID changed:")
-    pet3.print_info()
+    pet3.display_pet_info()
 
-    # Check Property
+    # Check Property. (According to ChatGPT, this keeps returning False because the attributes are private.)
 
     print ("Is there a pet id for Selina Kyle:")
+    print (pet1.check_property("pet_id"))
+
+    print ("\n")
+
+    print ("Is there an owner last name for Mr Sprinkles:")
+    print (pet3.check_property("owner_last_name"))
+
+    print ("\n")
+
+    print ("Is there a pet name for Juan's cat:")
+    print (pet2.check_property("pet_name"))
+
+
+
     
 
 
