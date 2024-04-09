@@ -62,12 +62,10 @@ def main():
     input_name = input("Please enter employee's name: ")
     input_employee_number = int(input("Please enter employee's number: "))
     input_pay_rate = float(input("Please enter employee's pay rate: "))
+    input_shift = int(input("Enter 1 for day shift, 2 for night shift: "))
 
-    while True:
-        input_shift = int(input("Enter 1 for day shift, 2 for night shift: "))
-
-        # Convert 1 or 2 into "Day" or "Night"
-        word_shift = convert_shift(input_shift)
+    # Convert 1 or 2 into "Day" or "Night"
+    word_shift = convert_shift(input_shift)
 
         
 
