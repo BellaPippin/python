@@ -13,10 +13,10 @@ class Employee:
 
     # Getters and Setters
     def get_employee_name(self):
-        return employee_name
+        return self.employee_name
     
     def get_employee_number(self):
-        return employee_number
+        return self.employee_number
     
     def set_employee_name(self, value):
         self.employee_name = value
@@ -45,7 +45,7 @@ class ProductionWorker(Employee):
     def set_shift(self, value):
         self.shift = value
 
-
+# This function converts user's input 1 or 2 into Day or Night.
 def convert_shift(int):
     if int == 1:
         return "Day"
@@ -69,7 +69,7 @@ def main():
 
         
 
-    # Initialize an employee
+    # Initialize an employee with the input given
 
     employee1 = ProductionWorker(input_name, input_employee_number, input_pay_rate, word_shift)
 
@@ -77,6 +77,13 @@ def main():
 
     print ("\n## Details of Employee:## \n")
 
+    print (f"Name: {employee1.get_employee_name()}")
+    print (f"Employee Number: {employee1.get_employee_number()}")
+    print (f"Shift: {employee1.get_shift()}")
+    print (f"Pay Rate: {employee1.get_pay_rate()}")
+
+
+    print ("\nYahoo! Program over. \n")
     
 
 
