@@ -13,13 +13,12 @@ class  NotNumericError(ValueError):
 def main():
     try:
         # Get input from user
-        value = int(input("Please enter a number from 0 to 9: "))
-        if not value.isnumeric():
-            raise NotNumericError()
+        value = int(input("Please enter a value from 0 to 9: "))
 
 
-    except NotNumericError as e:
-        print(f"Error: {e}")
+    except ValueError:
+        raise NotNumericError()
+    
     except Exception as e:
         print(f"The exception is: {e}")
         main()
