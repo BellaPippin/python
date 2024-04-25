@@ -11,6 +11,7 @@ def main():
     try:
         today = datetime.today()
 
+        # Ask user to input their birth date
         birth_year = int(input("What year were you born?  "))
         month = int(input("What month were you born (as a number. May would be 5)  "))
         day = int(input("What day of the month were you born?  "))
@@ -18,7 +19,7 @@ def main():
         #Make a date object with user's input and display it
         birthday = datetime(birth_year, month, day)
         birthday_output = birthday.strftime("%Y-%m-%d")
-        print(f"Ok. You were born on {birthday_output}.\n") 
+        print(f"\nOk. You were born on {birthday_output}.\n") 
 
         # Do math based on the day difference
         delta = today - birthday
@@ -32,6 +33,8 @@ def main():
         print (f"That is {delta_months} months!")
         print (f"That is {delta_weeks} weeks!")
         print (f"That is {delta_days} days!")
+
+        print ("\nFeel old yet?\n")
 
        
       
