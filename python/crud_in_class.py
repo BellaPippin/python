@@ -43,8 +43,8 @@ def check():
         file = open("customer_list.txt", "r")
         customer = file.readlines()
         for line in customer:
-            print(line) # This was for test purposes!
-        file.close()
+            # print(line) # This was for test purposes!
+            file.close()
         return customer
     except FileNotFoundError:
         print("That file does not exist. \n We will create a new file for you!")
@@ -78,7 +78,7 @@ def create():
         last_name = input("Last Name: ")
         phone = input("Phone number: ")
         email = input("Email address: ")
-        entry = (f"{first_name}, {last_name}, {phone}, {email}\n")
+        entry = f"{first_name}, {last_name}, {phone}, {email}\n"
         customer.append(entry)
         # for line in customer:
         #     print(line)
@@ -92,13 +92,42 @@ def create():
 def read():
     # will call the search function
     # will display the found record
-    print("read")
+    try:
+        found_customer, found_index = search()
+
+        print (f"Found {found_customer} at index {found_index}")
+
+    
+    except Exception as e:
+        print(f"Read: {e}")
+
     main()
 
 def search():
     # called by - read, update, delete
     # returns - record, index
-    print("Search")
+
+    try:
+        customer = check()
+
+        search_term = input("Enter the last name of the person we should search: ")
+
+        for line in customer:
+
+            if search_term in line:
+                customer_index = customer.index(line)
+
+                return line, customer_index
+        
+            else:
+                print (f"{search_term} was not found. Please try again.")
+        
+        
+
+
+    
+    except Exception as e:
+        print(f"Search: {e}")
 
 def update():
     # updates a record
